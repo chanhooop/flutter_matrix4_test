@@ -78,10 +78,12 @@ class _CardWidgetState extends State<CardWidget> with TickerProviderStateMixin {
       },
       onHorizontalDragUpdate: (details) {
         print('클릭2');
-        print('details : ${details.delta.dx}');
+        print('test : ${0 % 360}');
         setState(() {
           horizontalDrag -= details.delta.dx;
           horizontalDrag %= 360;
+          print('details.delta.dx : ${details.delta.dx}');
+          print('horizontalDrag : ${horizontalDrag}');
 
           setImageSide();
         });
